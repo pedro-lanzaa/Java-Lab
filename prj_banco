@@ -1,0 +1,17 @@
++--------------------------------+
+|         ContaBancaria          |
++--------------------------------+
+| - numeroConta: int             |
+| - cpfProprietario: String      |
+| - saldo: double                |
+| - limite: double               |
++--------------------------------+
+| + ContaBancaria(numeroConta: int, cpfProprietario: String, saldo: double, limite: double) |
+| + getNumeroConta(): int        |
+| + getCpfProprietario(): String |
+| + getSaldo(): double           |
+| + getLimite(): double          |
+| + sacar(valor: double): boolean|
+| + depositar(valor: double): void|
++--------------------------------+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
