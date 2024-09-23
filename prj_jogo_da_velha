@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class JogoDaVelha {
+    static char[][] tabuleiro = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
+    static char jogadorAtual = 'X';
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean jogoAtivo = true;
+
+        while (jogoAtivo) {
+            mostrarTabuleiro();
+            System.out.println("Jogador " + jogadorAtual + ", escolha uma posição (1-9): ");
+            int posicao = scanner.nextInt();
+            if (fazerMovimento(posicao)) {
+                if (verificarVencedor()) {
+                    mostrarTabuleiro();
+                    System.out.println("Jogador " + jogadorAtual + " venceu!");
+                    jogoAtivo = false;
+                } else if (tabuleiroCompleto()) {
+                    mostrarTabuleiro();
+                    System.out.println("Empate!");
+                    jogoAtivo
