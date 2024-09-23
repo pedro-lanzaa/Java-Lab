@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class SistemaLogin {
+    public static void main(String[] args) {
+        String usuarioCadastrado = "admin";
+        String senhaCadastrada = "1234";
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Usuário: ");
+        String usuario = scanner.nextLine();
+
+        System.out.println("Senha: ");
+        String senha = scanner.nextLine();
+
+        if (usuario.equals(usuarioCadastrado) && senha.equals(senhaCadastrada)) {
+            System.out.println("Login bem-sucedido!");
+        } else {
+            System.out.println("Usuário ou senha incorretos.");
+        }
+    }
+}
